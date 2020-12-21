@@ -1,0 +1,18 @@
+{
+  "name": "benefit",
+  "version": "1.0.0",
+  "description": "blockchain-development-project",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "devDependencies": {
+    "truffle-contract": "3.0.6",
+    "web3": "1.3.0"
+  },
+  "author": "Eduardo Álvarez Martínez",
+  "license": "ISC"
+}
