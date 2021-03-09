@@ -61,4 +61,5 @@ Para poner en marcha este proyecto debemos tener instalado:
   Haremos lo mismo en el directorio "benefit-customer".
   - Conectar la aplicación con Metamask:  
   Para ello nos ubicaremos en la pestaña del navegador en la que se encuentra cualquiera de las dos aplicaciones que hemos arrancado.  
-  Una vez allí, abriremos la extensión de Metamask y entraremos en nuestra cuenta. Una vez dentro, abriremos el menú de la cuenta y entraremos en "sitios conectados". Allí podremos conectar las cuentas que queramos con nuestra aplicación. 
+  Una vez allí, abriremos la extensión de Metamask y entraremos en nuestra cuenta. Una vez dentro, abriremos el menú de la cuenta y entraremos en "sitios conectados". Allí podremos conectar las cuentas que queramos con nuestra aplicación.  
+  Seguiremos los mismos pasos en la otra aplicación.
