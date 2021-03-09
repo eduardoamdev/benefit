@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.16;
 
 contract Token {
 
@@ -33,7 +33,7 @@ contract Token {
     uint256 public totalSupplyWithoutDecimals;
 
     constructor() public {
-        contractAddress = this;
+        contractAddress = address(this);
         initialPrice = 10000000000000000;
         price = 0;
         name = "Benefit";
