@@ -88,4 +88,4 @@ La aplicación permite, además, el intercambio de tokens entre usuarios y la co
 
   - ## Ya podemos utilizar todas las funcionalidades:
 
-  Llegados a este punto, ya nos encontramos en condiciones de que tanto el propietario como el cliente puedan utilizar todas las funcionalidades en las aplicaciones.
+  Llegados a este punto, ya nos encontramos en condiciones de que, tanto el propietario como el cliente, puedan utilizar todas las funcionalidades en las aplicaciones.
