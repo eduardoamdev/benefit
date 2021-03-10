@@ -81,7 +81,7 @@ La aplicación permite, además, el intercambio de tokens entre usuarios y la co
   Antes de nada decir que para lo que vamos a hacer en esta parte debemos de tener seleccionada la cuenta número uno, ya que esta es la dirección del propietario del contrato.
   Nos ubicamos en Benefit Owner y nos dirigimos a begin sold. Aquí ingresaremos el soporte que permitirá a los usuarios recuperar sus fondos aunque hayamos retirado la parte que ellos han ingresado.  
   Para ello, introduciremos en support la cantidad que queremos ingresar. Para testear la aplicación utilizo una cantidad redonda como es un ether.
-  Hay que decir, antes de nada, que la cadena de bloques no trabaja con ether si no con weys, así que ingresaremos la cantidad de weys que corresponden a un ether: 1000000000000000000
+  Hay que decir, antes de nada, que la cadena de bloques no trabaja con ether si no con weys, así que ingresaremos la cantidad de weys que corresponden a un ether: 1000000000000000000  
   Tras pulsar confirmar se nos abrirá metamask indicándonos la cantidad de ETH que vamos a ingresar, en este caso uno, y pidiéndonos confirmación.  
   Si confirmamos la transacción se hará efectiva. Ahora, tanto en Metamask como en Ganache podemos ver que de nuestra cuenta número uno se ha descontado la cantidad correspondiente.  
   Ahora, si nos dirigimos a Dapp info, tanto en Benefit Owner como en Benefit, podremos ver como la información ha cambiado ya que tenemos 100 BNFs disponibles para la venta, un ether de balance total del contrato, un ether de soporte y un precio por token que es básicamente el balance del contrato dividido entre el número total de tokens.
