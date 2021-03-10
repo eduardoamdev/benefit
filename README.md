@@ -2,10 +2,10 @@
 
 ## Descripción:
 
-Benefit es una aplicación creada para ser desplegada en la cadena de bloques de Ethereum y su proposito es el de crear una interfaz que nos permita comprar el token nativo ERC-20 del contrato (BNF) depositando ETH.  
-La idea principal es que los fondos almacenados en el contrato pueden ser retirados por el propietario del mismo para luego reingresarlos con beneficios añadidos que aumentarían el valor de los tokens. En una situación así, el usuario podría cambiar sus tokens por una cantidad de ETH superior a la que ingresó.
-En caso de no ingresarse ganancias, el usuario podría vender sus tokens al precio de compra ya que el propietario del contrato deposita un soporte a este efecto.
-La aplicación permite, además, el intercambio de tokens entre usuarios y la consulta en todo momento de la información del contrato.
+  Benefit es una aplicación creada para ser desplegada en la cadena de bloques de Ethereum y su proposito es el de crear una interfaz que nos permita comprar el token nativo ERC-20 del contrato (BNF) depositando ETH.  
+  La idea principal es que los fondos almacenados en el contrato pueden ser retirados por el propietario del mismo para luego reingresarlos con beneficios añadidos que aumentarían el valor de los tokens. En una situación así, el usuario podría cambiar sus tokens por una cantidad de ETH superior a la que ingresó.
+  En caso de no ingresarse ganancias, el usuario podría vender sus tokens al precio de compra ya que el propietario del contrato deposita un soporte a este efecto.
+  La aplicación permite, además, el intercambio de tokens entre usuarios y la consulta en todo momento de la información del contrato.
 
 ## Clonar el repositorio:
 
