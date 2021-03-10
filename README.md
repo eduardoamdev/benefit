@@ -67,7 +67,7 @@
 
 ## Cómo utilizar la aplicación:
 
-  - ## Explicación de los apartados de Benefit Owner:
+  - ### Explicación de los apartados de Benefit Owner:
   En primer lugar debemos dirigirnos a Benefit Owner, que es la aplicación del propietario o administrador del contrato. Allí nos encontraremos una barra de navegación con varios apartados.  
   El primero de ellos es Home, el cual nos ofrece la portada del sitio.  
   Seguidamente, encontraremos Dapp Info, que nos permite ver la información de nuestro contrato. De momento tan solo nos enseñará que la aplicación tiene 100 tokens existentes pero ninguno está disponible para su compra, por lo que el apartado available tokens marca 0. De la misma forma los fondos de nuestro contrato todavía son 0 ETH, así como el soporte y el precio de cada token.  
@@ -76,7 +76,7 @@
   Extract ether da la opción al propietario de extraer los fondos que no formen parte del soporte.  
   End sold permite al usuario cerrar el contrato y retirar tanto los tokens como los fondos que contenga el mismo.
 
-  - ## Poniendo nuestros tokens a disposición del cliente:
+  - ### Poniendo nuestros tokens a disposición del cliente:
   
   Antes de nada decir que para lo que vamos a hacer en esta parte debemos de tener seleccionada la cuenta número uno, ya que esta es la dirección del propietario del contrato.
   Nos ubicamos en Benefit Owner y nos dirigimos a begin sold. Aquí ingresaremos el soporte que permitirá a los usuarios recuperar sus fondos aunque hayamos retirado la parte que ellos han ingresado.  
@@ -86,6 +86,6 @@
   Si confirmamos la transacción se hará efectiva. Ahora, tanto en Metamask como en Ganache podemos ver que de nuestra cuenta número uno se ha descontado la cantidad correspondiente.  
   Ahora, si nos dirigimos a Dapp info, tanto en Benefit Owner como en Benefit, podremos ver como la información ha cambiado ya que tenemos 100 BNFs disponibles para la venta, un ether de balance total del contrato, un ether de soporte y un precio por token que es básicamente el balance del contrato dividido entre el número total de tokens.
 
-  - ## Ya podemos utilizar todas las funcionalidades:
+  - ### Ya podemos utilizar todas las funcionalidades:
 
   Llegados a este punto, ya nos encontramos en condiciones de que, tanto el propietario como el cliente, puedan utilizar todas las funcionalidades en las aplicaciones.
