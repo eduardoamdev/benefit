@@ -31,7 +31,7 @@ La aplicación permite, además, el intercambio de tokens entre usuarios y la co
   Debemos acudir al siguiente enlace: https://www.trufflesuite.com/ganache
   - ### Metamask:  
   Se trata de una billetera que custodia claves privadas de la cadena de bloques de Ethereun además de servir como intermediario entre nuestro sitio web y la blockchain y otras muchas funcionalidades.  
-  Quedará instalada com una extensión de nuestro navegador.  
+  Quedará instalada como una extensión de nuestro navegador.  
   Enlace de descarga en: https://metamask.io/
   - ### Instalar paquetes dentro del proyecto con npm:  
   El proyecto consta de tres directorios: benefit-api, benefit-customer y benefit-owner. Debemos entrar en cada uno de ellos y ejecutar el comando "npm i" para instalar los paquetes correspondientes.
