@@ -39,7 +39,7 @@
 ## Primeros pasos:
 
   - ### Abrir Ganache:   
-    Abriremos Ganache , seleccionaremos la opción "quick star" para empezar a trabajar y, de esta manera, empezará a ejecutarse nuestro entorno de desarrollo simulando la red de Ethereum.
+    Abriremos Ganache , seleccionaremos la opción "quick start" para empezar a trabajar y, de esta manera, empezará a ejecutarse nuestro entorno de desarrollo simulando la red de Ethereum.
   - ### Desplegar nuestro proyecto en la red de Ganache:  
     Para ello, nos dirigiremos al directorio "benefit-api" de nuestro proyecto y ejecutaremos el comando "truffle compile". Este comando compilará los contratos inteligentes dejándolos listos para el despliegue.  
     El siguiente paso, una vez la compilación se haya realizado con éxito, será ejecutar, en este mismo directorio, el comando "truffle migrate" el cual desplegará nuestros contratos inteligentes en Ganache.  
