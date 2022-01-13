@@ -1,5 +1,7 @@
 # Benefit
 
+<img src="./readme-images/truffle-suite.png" alt="Despliegue en la terminal" />
+
 ## Descripción:
 
 Benefit es una aplicación creada para ser desplegada en la cadena de bloques de Ethereum y su proposito es el de crear una interfaz que nos permita comprar el token nativo ERC-20 del contrato (BNF) depositando ETH.  
