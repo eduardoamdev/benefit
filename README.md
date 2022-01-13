@@ -116,7 +116,7 @@ Se nos abrirá un input en el cual deberemos escribir nuestra clave privada.
 
 La cuenta ya estará importada.
 
-<img src="./readme-images/images/succesful-import.png" alt="Importación exitosa" />
+<img src="./readme-images/succesful-import.png" alt="Importación exitosa" />
 
 Para probar la aplicación sería recomendable hacer lo mismo con varias cuentas de las que nos ha generado Ganache.
 
