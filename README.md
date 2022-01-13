@@ -63,7 +63,7 @@ El siguiente paso, una vez la compilación se haya realizado con éxito, será e
 
 Vemos como, en la ventana izquierda de la terminal de comandos, aparecen dos transacciones, la primera con un hash que termina en 4838 y la segunga con otro que termina el 30c6.
 
-<img src="./benefit-owner/public/images/deploy-terminal" alt="Despliegue en la terminal" />
+<img src="./images/deploy-terminal" alt="Despliegue en la terminal" />
 
 Para comprobar que el proceso se ha realizado correctamente nos dirigiremos a Ganache y, en la barra de navegación superior, haremos click en "transactions". Deberan aparecernos dos transacciones con el marcador "contract creation cuyo hash coincidirá con los anteriores.
 
