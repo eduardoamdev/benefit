@@ -55,7 +55,11 @@ El proyecto consta de tres directorios: benefit-api, benefit-customer y benefit-
 
 ### Abrir Ganache:
 
-Abriremos Ganache , seleccionaremos la opción "quick start" para empezar a trabajar y, de esta manera, empezará a ejecutarse nuestro entorno de desarrollo simulando la red de Ethereum.
+Abriremos Ganache , seleccionaremos la opción "quick start" para empezar a trabajar
+
+<img src="./readme-images/ganache-start.png" alt="Inicio en ganache" />
+
+De esta manera, empezará a ejecutarse nuestro entorno de desarrollo simulando la red de Ethereum.
 
 ### Desplegar nuestro proyecto en la red de Ganache: 
 
