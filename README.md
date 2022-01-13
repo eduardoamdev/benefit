@@ -128,7 +128,7 @@ Cuando el navegador abra la aplicación veremos el "home" del owner.
 <img src="./readme-images/owner-home.png" alt="Inicio del propietario" />
 
 Haremos lo mismo en el directorio "benefit-customer".
-Igualmente, al final del proceso, el navegador deberá mostrarnos la el home del cliente.
+Igualmente, al final del proceso, el navegador deberá mostrarnos el home del cliente.
 
 <img src="./readme-images/client-home.png" alt="Inicio del cliente" />
 
