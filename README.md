@@ -144,19 +144,19 @@ Una vez dentro, abriremos el menú de la cuenta y entraremos en "sitios conectad
 
 El siguiente paso será conectar manualmente.
 
-<img src="./readme-images/connect-metamask-3" alt="Conectando Metamask 3.png" />
+<img src="./readme-images/connect-metamask-3.png" alt="Conectando Metamask 3.png" />
 
 Después, tendremos que elegir la cuenta correspondiente.
 
-<img src="./readme-images/connect-metamask-4" alt="Conectando Metamask 4.png" />
+<img src="./readme-images/connect-metamask-4.png" alt="Conectando Metamask 4.png" />
 
 Para terminar, pulsaremos en conectar.
 
-<img src="./readme-images/connect-metamask-5" alt="Conectando Metamask 5.png" />
+<img src="./readme-images/connect-metamask-5.png" alt="Conectando Metamask 5.png" />
 
 Ahora, en el apartado de "sitios conectados" debería aparecernos la url local de nuestra aplicación de front-end.
 
-<img src="./readme-images/connect-metamask-6" alt="Conectando Metamask 6.png" />
+<img src="./readme-images/connect-metamask-6.png" alt="Conectando Metamask 6.png" />
 
 Seguiremos los mismos pasos en la otra aplicación.
 
