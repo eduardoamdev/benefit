@@ -389,7 +389,7 @@ Este paquete de software consiste en una colección de librerías que nos permit
 
 React es una biblioteca de Javascript que sirve para crear interfaces de usuario de una manera sencilla y basándonos en la elaboración de componentes.
 
-## ¿Qué me ha aportado este proyecto?:
+## ¿Qué me ha aportado este proyecto?
 
 Este proyecto me ha servido para introducirme en el desarrollo en blockchain.
 He elegido Solidity debido a la gran cantidad de documentación existente y a que ya hay creado un conjunto de entornos de desarrollo que nos facilitan el despliegue y la utilización de los contratos inteligentes.
