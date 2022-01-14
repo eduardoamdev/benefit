@@ -359,7 +359,7 @@ Para ello tiene que entrar, dentro de la aplicación del usuario en redeem token
 
 Si después de confirmar la transacción entramos en account info veremos como esta cuenta tiene 0 BNF y, por lo tanto, 0 ETH que recoger como dividendos. Por contra, si abrimos Metamask nos aparecerá que su saldo ha aumentado como consecuencia de la recogida de dividendos (ahora el balance de esta cuenta supera los 100 ETH iniciales).
 
-<img src="./readme-images/acocunt-after-redeem.png" alt="Cuenta tras devolver los diez ether" />
+<img src="./readme-images/aaccount-after-redeem.png" alt="Cuenta tras devolver los diez ether" />
 
 ### Liquidación del contrato:
 
