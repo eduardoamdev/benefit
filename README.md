@@ -310,3 +310,88 @@ Una vez hecho esto, accederemos a un formulario que contiene un campo con el lab
 Ahora ya sólo queda confirmar y nuestro token habrá quedado listado.
 
 <img src="./readme-images/imported-token.png" alt="Token BNF inportado" />
+
+### Extraer el ETH que no forme parte del soporte (esta labor corresponde únicamente al propietario del contrato):
+
+Ahora vamos a ponernos en otra situación.
+Tenemos una cuenta de propietario y dos cuentas de cliente, una con 10 BNF y otra con 5 BNF.
+Como consecuencia de las compras de estos usuarios la situación del contrato es la siguiente.
+
+<img src="./readme-images/contract-before-extract.png" alt="Situación del contrato antes de extraer los ETH" />
+
+Ahora vamos a fijarnos en el balance, que es de 1.15 ETH. Como el soporte es de 1 ETH podremos extraer 0.15 ETH para operar.
+Con esta idea, desde la aplicación del owner y con la cuenta del mismo, vamos a dirigirnos al apartado extract ether y vamos a rellenar el input con la cantidad de weys (recordamos que debemos trabajar en weys y que un wey es igual a diez elevado a la menos dieciocho ether) que queremos extraer.
+
+<img src="./readme-images/extracting-ether.png" alt="Extrayendo ether" />
+
+Ahora la situación del contrato pasa a ser la siguiente.
+
+<img src="./readme-images/contract-after-extract.png" alt="Contrato después de extraer el ether" />
+
+Vemos que se han vendido quince tokens pero que, al retirar el ether, el balance ha pasado de 1.15 ETH a 1 ETH.
+Gracias a que este soporte se encuentra en el contrato los usuarios podrán recuperar su inversión en cualquier momento aunque el propietario haya retirado fondos.
+
+### Ingresar ETH (esta labor corresponde únicamente al propietario del contrato):
+
+Pongamos que el owner, que había retirado 0.15 ETH, ha operado con los activos y los ha multiplicado por dos obteniendo, de esta manera 0.3 ETH. Podría ser un buen momento para ingresar los beneficios.
+Para ello, entraremos, dentro de la aplicación del owner, en credit ether. Una vez allí, rellenaremos el input con la cantidad de weys que queremos ingresar, en este caso, 300000000000000000.
+
+<img src="./readme-images/credit-ether.png" alt="Ingresando ether" />
+
+Tras confirmar la operación iremos a revisar la nueva situación del contrato.
+
+<img src="./readme-images/contract-after-credit.png" alt="Contrato después de ingresar ether" />
+
+Vemos que al haber doblado el owner la cantidad de ether que tenemos en el contrato (al margen del soporte) también se han doblado tanto los dividendos que se obtienen al salir (0.02 ETH por token frente al 0.01 ETH que se obtenía anteriormente) como el precio del token (que también ha pasado de 0.01 ETH a 0.02 ETH).
+
+### Retirar dividendos:
+
+Siguiendo en el contexto del anterior apartado, vamos a suponer que uno de los usuarios de la dapp, viendo que los dividendos se han doblado, vender su token y recoger beneficios.
+Utilizaremos como ejemplo, un usuario que tiene 10 tokens.
+
+<img src="./readme-images/balance-before-redeem.png" alt="Balance antes de retirar dividendos" />
+
+En este caso la suma que este usuario obtendrá si vende sus token será el doble de la inversión que hizo. Como la inversión fue de 1 ETH (diez tokens BNF) ahora obtendrá 2 ETH.
+
+Para ello tiene que entrar, dentro de la aplicación del usuario en redeem tokens para una vez allí introducir la cantidad de tokens que desea devolver al contrato. En este caso vamos a devolver los 10 BNF.
+
+<img src="./readme-images/redeeming-ten-bnf.png" alt="Devolviendo 10 BNF" />
+
+Si después de confirmar la transacción entramos en account info veremos como esta cuenta tiene 0 BNF y, por lo tanto, 0 ETH que recoger como dividendos. Por contra, si abrimos Metamask nos aparecerá que su saldo ha aumentado como consecuencia de la recogida de dividendos (ahora el balance de esta cuenta supera los 100 ETH iniciales).
+
+<img src="./readme-images/acocunt-after-redeem.png" alt="Cuenta tras devolver los diez ether" />
+
+### Liquidación del contrato:
+
+Dentro de la aplicación del propietario, este tiene una opción para liquidar el contrato con lo cual, los fondos que el mismo albergara pasarían a su cuenta y se suspendería la venta de tokens.
+
+<img src="./readme-images/liquidate-contract.png" alt="Liquidación del contrato" />
+
+## Tecnologías empleadas:
+
+### Ganache:
+
+Ganache es un entorno de desarrollo que nos proporciona una red de pruebas para desarrollo de aplicaciones descentralizadas en el que podemos desplegar contratos inteligentes, interactuar con Metamask y crear cuentas entre otras funcionalidades.
+
+### Truffle:
+
+Truffle es un entorno de desarrollo que nos proporciona un conjunto de herramientas para desarrollar en la red de Ethereum de una manera más amigable.
+
+### Metamask:
+
+Metamask es la wallet que estamos empleando y que hace de intermediario entre nuestro front-end y la cadena de bloques o, en este caso, el entorno generado por Ganache.
+
+### Web3:
+
+Este paquete de software consiste en una colección de librerías que nos permiten interactuar con nodos de la red de Ethereum.
+
+### React:
+
+React es una biblioteca de Javascript que sirve para crear interfaces de usuario de una manera sencilla y basándonos en la elaboración de componentes.
+
+## ¿Qué me ha aportado este proyecto?:
+
+Este proyecto me ha servido para introducirme en el desarrollo en blockchain.
+He elegido Solidity debido a la gran cantidad de documentación existente y a que ya hay creado un conjunto de entornos de desarrollo que nos facilitan el despliegue y la utilización de los contratos inteligentes.
+La verdad es que introducirme en Solidity ha sido una experiencia. Para un desarrollador MERN como yo retirar una parte de las tecnologías, ya que NodeJS y MongoDB no han sido empleadas en este proyecto, para sustituirlas por otras nuevas como Solidity y Ganache supone un esfuerzo por adaptarse al nuevo lenguaje y aprender a usar las herramientas de las que se disponen. Esta es una situación a la que creo que combiene acostumbrarse ya que el mundo del desarrollo web va cambiando, las tecnologías se actualizan o se remplazan por otras nuevas y a nosotros nos toca adaptarnos en este entorno.
+Por lo demás, estoy satisfecho de haberme introducido en el desarrollo en blockchain ya que considero que es un sector con futuro y con gran capacidad de expansión.
