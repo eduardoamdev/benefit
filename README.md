@@ -5,8 +5,8 @@
 ## Descripción:
 
 Benefit es una aplicación creada para ser desplegada en la cadena de bloques de Ethereum y su proposito es el de crear una interfaz que nos permita comprar el token nativo ERC-20 del contrato (BNF) depositando ETH.  
-La idea principal es que los fondos almacenados en el contrato pueden ser retirados por el propietario del mismo para luego reingresarlos con beneficios añadidos que aumentarían el valor de los tokens. En una situación así, el usuario podría cambiar sus tokens por una cantidad de ETH superior a la que ingresó.
-En caso de no ingresarse ganancias, el usuario podría vender sus tokens al precio de compra ya que el propietario del contrato deposita un soporte a este efecto.
+La idea principal es que los fondos depositados por los usuarios dentro del contrato inteligente pueden ser retirados por el propietario del mismo para luego reingresarlos con beneficios añadidos que aumentarían el valor de los tokens ya que este aumenta a medida que más ETH va entrando en el contrato. En una situación así, el usuario podría cambiar sus tokens por una cantidad de ETH superior a la que ingresó.
+En caso de no ingresarsen ganancias, el usuario podría vender sus tokens al precio de compra ya que el propietario del contrato deposita un soporte a este efecto.
 La aplicación permite, además, el intercambio de tokens entre usuarios y la consulta en todo momento de la información del contrato.
 
 ## Clonar el repositorio:
@@ -133,13 +133,8 @@ Cuando el navegador abra la aplicación veremos el "home" del owner.
 
 <img src="./readme-images/owner-home.png" alt="Inicio del propietario" />
 
-Haremos lo mismo en el directorio "benefit-customer".
-Igualmente, al final del proceso, el navegador deberá mostrarnos el home del cliente.
-
-<img src="./readme-images/client-home.png" alt="Inicio del cliente" />
-
 ### Conectar la aplicación con Metamask:  
-Para ello nos ubicaremos en la pestaña del navegador en la que se encuentra cualquiera de las dos aplicaciones que hemos arrancado.  
+Para ello nos ubicaremos en la pestaña del navegador en la aplicación del owner que acabamos de arrancar.  
 Una vez allí, abriremos la extensión de Metamask y entraremos en nuestra cuenta.
 
 <img src="./readme-images/connect-metamask-1.png" alt="Conectando Metamask 1" />
@@ -209,3 +204,109 @@ El número total de tokens a la venta ha pasado a ser de 100 BNF ya que ahora to
 El balance total son 1 ETH ya que es la cantidad que hemos depositado.
 El soporte, cantidad que respalda la dapp para que el usuario siempre pueda recuperar como mínimo su inversión inicial, son los 10 ETH depositados.
 El precio del token es de 0.01 ETH que es el fijado como valor inicial. Más adelante hablaremos del criterio que se sigue para fijar el precio del token.
+Si ahora entramos en Ganache veremos como al saldo de la cuenta de alministrador (la primera del listado) se le ha descontado la cantidad correspondiente.
+
+<img src="./readme-images/eth-after-initialize.png" alt="Saldo después de inicializar" />
+
+### Comprar nuestros primeros tokens con una cuenta de cliente:
+
+En primer lugar abriremos la aplicación del cliente con nuestro navegador.
+
+<img src="./readme-images/client-home.png" alt="Inicio del cliente" />
+
+#### Abrir la aplicación del cliente e importar una cuenta de usuario:
+
+Abriremos nuestra wallet de Metamask e importaremos una cuenta distinta de la del owner de entre todas las que tenemos en Ganache (el owner puede operar también pero vamos a simular que llega a la dapp un usuario externo). Para ello conectaremos la wallet del cliente de la misma manera que hicimos con la del owner.
+
+#### Conectar la Metamask a nuestra aplicación:
+
+En primer lugar, seleccionaremos la cuenta del cliente en nuestra billetera de Metamask. Vemos que esta cuenta tiene los 100 ETH iniciales puesto que nunca se ha usado.
+
+<img src="./readme-images/client-account-selected.png" alt="Cuenta del cliente seleccionada" />
+
+Una vez hecho esto conectamos Metamask con nuestra aplicación como ya hemos hecho en la del owner.
+Ahora, podemos revisar el apartado dapp info para ver que nos aparece la misma información que al owner.
+
+<img src="./readme-images/client-contract-info.png" alt="Información del contrato vista desde el cliente" />
+
+Por otro lado, entrando en account info podremos consultar los dividendos que recibiríamos al retirar la inversión (expresados en ETH ya que va a ser el activo empleado para el pago) y el saldo en BNF de nuestra propia cuenta.
+
+<img src="./readme-images/zero-account-info.png" alt="Información del cliente con saldo cero" />
+
+#### Comprar tokens
+
+Vamos a comprar 2 tokens BNF. Para ello entraremos en el apartado "buy tokens" y rellenaremos el input con la cantidad de BNF que deseamos adquirir.
+
+<img src="./readme-images/buying-tokens-input.png" alt="Formulario relleno para compra de tokens" />
+
+Si confirmamos, nos aparecerá la ventana emergente con nuestra wallet indicándonos el desembolso correspondiente, en este caso 0.02 ETH puesto el precio del token es de 0.01 ETH.
+
+<img src="./readme-images/buying-tokens-metamask.png" alt="Confirmación de compra en Metamask" />
+
+Seguidamente, nos aparecerá una ventana emergente informando de que la transacción ha sido realizada correctamente.
+
+<img src="./readme-images/buying-confirmation.png" alt="Confirmación de compra en ventana emergente" />
+
+Ahora en account info figura un saldo de 2 BNF y unos dividendos generados de 0.02 ETH. Estos dividendos se incrementarán según pase el tiempo ya que la idea es que el owner opere con los fondos no contenidos en el respaldo para después reingresar lo retirado junto con los beneficios obtenidos.
+
+<img src="./readme-images/info-client-with-bnf.png" alt="Información del usuario tras la compra" />
+
+Del mismo modo, Metamask también refleja esa transacción y además, incluye en nuestra lista de assets el token BNF con la cantidad correspondiente.
+
+<img src="./readme-images/metamask-show-bnf.png" alt="BNF listado en nuestra wallet de Metamask" />
+
+También podemos ver, entrando en dapp info, como la situación del contrato inteligente ha cambiado.
+
+<img src="./readme-images/info-contract-after-buying.png" alt="Información del contrato tras la compra" />
+
+El supply siempre va a ser de 100 BNF puesto que es la cantidad total de tokens existentes.
+Los tokens disponibles (available tokens) han pasado a ser 98 BNF ya que hemos vendido 2 BNF y estos se han restado de los 100 BNF iniciales que albergaba el contrato.
+Al balance del contrato (contract balance) se le han sumado los 0.02 ETH depositados por el usuario para la compra de tokens.
+El soporte sigue siendo de 1 ETH.
+Y el precio del token no ha variado. Para que este precio varíe es necesario que el usuario introduzca más fondos.
+
+### Transferir tokens a otra cuenta:
+
+Vamos a partir de que hemos hecho la compra de 2 BNF con una cuenta en el apartado anterior y queremos transferir 1 BNF a otra que tiene 0 BNF.
+A continuación mostramos la situación de la cuenta que va a recibir esta transferencia.
+
+<img src="./readme-images/third-account.png" alt="Cuenta que va a recibir la transacción de BNF" />
+
+Para efectuar la transferencia, cambiamos a la cuenta con la que hicimos la compra y entramos en transfer tokens. Una vez dentro pondremos tanto la dirección de destino como la cantidad de BNF a enviar.
+
+<img src="./readme-images/transfer-form.png" alt="Formulario para efectuar la transacción de BNF" />
+
+Si confirmamos nos aparecerá la ventana emergente de Metamask indicándonos esta vez que se va a transferir 1 BNF a la dirección de destino.
+
+<img src="./readme-images/metamask-bnf-transaction.png" alt="Transacción de BNF en Metamask" />
+
+Después veremos la correspondiente ventana emergente confirmando la nueva trasacción.
+
+<img src="./readme-images/confirming-transaction.png" alt="Transacción confirmada" />
+
+Vemos como el saldo de esta cuenta se ha reducido a 1 BNF y en consecuencia, sus dividendos han bajado a 0.01 ETH.
+
+<img src="./readme-images/sender-new-balance.png" alt="Balance del emisor" />
+
+También podemos ver como el balance de la cuenta receptora ha pasado de 0 BNF a 1 BNF así como sus dividendos ahora serían de 0.01 ETH.
+
+<img src="./readme-images/destination-account-info.png" alt="Balance de la cuenta de destino" />
+
+Me gustaría mencionar un detalle importante antes de continuar y es que, si abrimos la billetera de Metamask de la cuenta que ha recibido la transacción veremos como el token BNF no figura en el listado de assets.
+
+<img src="./readme-images/no-bnf.png" alt="BNF no figura en Metamask" />
+
+Esto no significa que haya habido algún problema ya que aunque los tokens no estén listados se encuentran igualmente asignados a nuestra cuenta.
+De todas formas, si queremos listar el token porque deseamos tenerlo a la vista necesitaremos la dirección del contrato inteligente para que Metamask lo pueda encontrar dentro de la red. Encontraremos esta dirección en Ganache o en nuestra consola de comandos ya que se nos mostró durante el despliegue.
+Esta dirección la copiaremos en nuestro portapapeles.
+
+<img src="./readme-images/contract-address.png" alt="Dirección del contrato" />
+
+Una vez copiada la dirección nos dirigiremos a nuestra billetera de Metamask y seleccionaremos en la parte de abajo la opción importar tokens.
+Una vez hecho esto, accederemos a un formulario que contiene un campo con el label "token contract address". Aquí será donde pegaremos la dirección de nuestro contrato para que, de manera automática, se nos rellenen todos los demás campos.
+
+<img src="./readme-images/importing-token.png" alt="Importando el token de BNF" />
+
+Ahora ya sólo queda confirmar y nuestro token habrá quedado listado.
+
+<img src="./readme-images/imported-token.png" alt="Token BNF inportado" />
