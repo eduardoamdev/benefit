@@ -1,6 +1,6 @@
 # Benefit
 
-<img src="./readme-images/truffle-suite.png" alt="Despliegue en la terminal" />
+<img src="./readme-images/metamask-truffle-ganache.png" alt="Despliegue en la terminal" />
 
 ## Descripción:
 
