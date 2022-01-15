@@ -13,7 +13,7 @@ La aplicación permite, además, el intercambio de tokens entre usuarios y la co
 
 Copiaremos el repositorio y lo clonaremos utilizando el comando "git clone" seguido del repositorio en el directorio que deseemos.
 
-## Instalación de paquetes:
+## Instalaciones necesarias y breve explicación de las tecnologías empleadas:
 
 ### NodeJs: 
 
@@ -32,24 +32,34 @@ Si somos usuarios de Ubuntu podemos emplear el siguiente enlace para instalar No
 
 ### Truffle: 
 
-Es un entorno de desarrollo que nos ayuda a crear aplicaciones descentralizadas.  
+Truffle es un entorno de desarrollo que nos proporciona un conjunto de herramientas para desarrollar en la red de Ethereum de una manera más amigable.
 Para instalarlo ejecutaremos el comando: npm i -g truffle.
 Para más información visitar: https://blog.desdelinux.net/truffle-framework-herramientas-codigo-abierto-blockchain/?utm_source=dlvr.it&utm_medium=facebook
 
 ### Ganache: 
 
-Descargaremos Ganache para nuestro sistema operativo.  
+Ganache es un entorno de desarrollo que nos proporciona una red de pruebas para desarrollo de aplicaciones descentralizadas en el que podemos desplegar contratos inteligentes, interactuar con Metamask y crear cuentas entre otras funcionalidades.
+En mi caso, como usuario de una distribución de Linux, únicamente he tenido que descargar el archivo imágen, darle los permisos pertinentes y abrirlo para poder ejecutar la aplicación. 
 Debemos acudir al siguiente enlace: https://www.trufflesuite.com/ganache
 
 ### Metamask: 
 
-Se trata de una billetera que custodia claves privadas de la cadena de bloques de Ethereun además de servir como intermediario entre nuestro sitio web y la blockchain y otras muchas funcionalidades.  
-Quedará instalada como una extensión de nuestro navegador.  
+Metamask es la wallet que estamos empleando y que hace de intermediario entre nuestro front-end y la cadena de bloques o, en este caso, el entorno generado por Ganache.
+Este paquete de software se instalará como una extensión de nuestro navegador. Es aconsejable instalarlo el Google Chrome o en Brave.
 Enlace de descarga en: https://metamask.io/
 
 ### Instalar paquetes dentro del proyecto con npm:  
 
 El proyecto consta de tres directorios: benefit-api, benefit-customer y benefit-owner. Debemos entrar en cada uno de ellos y ejecutar el comando "npm i" para instalar los paquetes correspondientes.
+Voy a mencionar dos de los que considero que debemos tener presentes para entender como está construído el proyecto.
+
+#### Web3:
+
+Este paquete de software consiste en una colección de librerías que nos permiten interactuar con nodos de la red de Ethereum.
+
+#### React:
+
+React es una biblioteca de Javascript que sirve para crear interfaces de usuario de una manera sencilla y basándonos en la elaboración de componentes.
 
 ## Primeros pasos:
 
@@ -366,28 +376,6 @@ Si después de confirmar la transacción entramos en account info veremos como e
 Dentro de la aplicación del propietario, este tiene una opción para liquidar el contrato con lo cual, los fondos que el mismo albergara pasarían a su cuenta y se suspendería la venta de tokens.
 
 <img src="./readme-images/liquidate-contract.png" alt="Liquidación del contrato" />
-
-## Tecnologías empleadas:
-
-### Ganache:
-
-Ganache es un entorno de desarrollo que nos proporciona una red de pruebas para desarrollo de aplicaciones descentralizadas en el que podemos desplegar contratos inteligentes, interactuar con Metamask y crear cuentas entre otras funcionalidades.
-
-### Truffle:
-
-Truffle es un entorno de desarrollo que nos proporciona un conjunto de herramientas para desarrollar en la red de Ethereum de una manera más amigable.
-
-### Metamask:
-
-Metamask es la wallet que estamos empleando y que hace de intermediario entre nuestro front-end y la cadena de bloques o, en este caso, el entorno generado por Ganache.
-
-### Web3:
-
-Este paquete de software consiste en una colección de librerías que nos permiten interactuar con nodos de la red de Ethereum.
-
-### React:
-
-React es una biblioteca de Javascript que sirve para crear interfaces de usuario de una manera sencilla y basándonos en la elaboración de componentes.
 
 ## ¿Qué me ha aportado este proyecto?
 
